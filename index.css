@@ -1,0 +1,219 @@
+/* Font
+
+"Helvetica", sans-serif
+Colors
+
+Background: #F4F1EA
+Title text: #A52A2A (brown)
+Navigation links on hover: #A52A2A (brown)
+Button color: #A52A2A (brown)
+Button text color: #FFFFFF (white)
+Button text color on hover: #800080 (purple)
+Button border color on hover: #800080 (purple)
+Book box shadow color: #778899(lightslategray)
+Other text: #000000 (black) */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --background-col:#F4F1EA;
+    --title-color: #A52A2A ;
+    --button-color:#A52A2A ;
+    --button-text: #FFFFFF;
+    --button-text-hover:#800080 ;
+    --button-border-hover:#800080 ;
+    --book-box-shadow:#778899;
+    --other:#000000;
+}
+
+body{background-color: var(--background-col);}
+
+
+#header-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.header{
+    color:var(--title-color);
+    font-size: 25px;
+}
+
+.navigation{
+    display: flex;
+    gap: 60px;
+    font-weight: bold;
+}
+.navigation >a{
+    text-decoration: none;
+    color:var(--button-border-hover)
+}
+.navigation >a:hover{
+    color:orangered;
+    text-decoration: solid;
+}
+
+.search-container > input{
+    width: auto;
+    /* width: px; */
+    text-align: center;
+    border: 1px solid var(--other);
+    
+    
+    
+
+    
+}
+.search-container >i:hover{
+    cursor: pointer;
+}
+.heading{
+    text-align: center;
+    font-size: 20px;
+}
+
+#reads-container{
+    display: flex;
+    gap:5px;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    flex-direction: row;
+}
+.book{
+    border:1px solid var(--button-color);
+    display: flex;
+    margin: 10px;
+  
+
+    
+    
+    
+/* height: 550px; */
+    /* padding:30px;  */
+}
+image-and-button{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+.book-cover{
+margin: 10px;
+    width:140px;
+    height: 200px;
+    box-shadow: 2px 2px 4px 2px var(--book-box-shadow);
+}
+.text{
+
+    font-size: 14px;
+text-align: left;
+    /* padding:0px;
+     */
+     margin: 10px;
+    width:250px
+}
+
+.add-button{
+    text-align: center;
+    background-color: var(--button-color);
+    margin-left:10px;
+    padding: 5px;
+    width:130px;
+    border:1px solid var(--button-color)
+}
+.add-button:hover{
+   background-color: var(--button-text);
+   color:var(--button-border-hover)
+}
+.add-button>a{
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--button-text);
+    
+}
+.add-button>a:hover{
+    color:var(--button-border-hover);
+    background-color: white;
+    /* border:1px solid var(--button-border-hover); */
+}
+
+#footer{
+ display: flex;
+ /* width: auto; */
+ /* flex-direction: column; */
+ justify-content: space-around;
+ align-items: center;
+ 
+ /* border:1px solid black */
+    
+}
+
+.company{
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    padding: 0;
+}
+.navig >a{
+    margin: 10px;
+    text-decoration: none;
+    color:var(--button-border-hover)
+    
+}
+
+.connect{
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    padding: 0;;
+
+}
+.buttons>i{
+    margin: 20px;
+    /* text-decoration: none; */
+}
+
+    /* justify-self: flex-end; */
+
+    .navig >a:hover{
+        color:orangered;
+        text-decoration: solid;
+    }
+    /* a:hover{text-decoration: solid;} */
+    .buttons>i:hover{
+cursor: pointer;
+    }
+
+
+ @media screen and (max-width: 700px){ 
+        
+        #header-container{
+            
+        display: flex;
+    flex-direction: row;
+    gap:10px;
+    flex-direction: column;
+        /* flex-direction: column; */
+        /* justify-content: space-around; */
+        /* align-items: center; */
+        }
+        #reads-container{
+            display: flex;
+            gap:5px;
+            /* justify-content: space-evenly; */
+            justify-content: center;
+            flex-direction: column;
+        }
+        .book{
+            border:none;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
